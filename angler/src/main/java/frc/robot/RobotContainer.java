@@ -17,8 +17,4 @@ public class RobotContainer {
   public Command getAutonomousCommand() {
     return null;
   }
-
-  public Command getTeleopCommand() {
-    return null;
-  }
 }
