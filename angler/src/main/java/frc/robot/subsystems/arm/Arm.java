@@ -51,9 +51,9 @@ public class Arm extends SubsystemBase {
 
   @Override
   public void periodic() {
+    // This method will be called once per scheduler run
     m_io.updateInputs(m_inputs);
     Logger.processInputs("Arm", m_inputs);
-    // This method will be called once per scheduler run
   }
 
   public class ArmSendable implements Sendable {

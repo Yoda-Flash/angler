@@ -38,10 +38,11 @@ public class ArmIOTalonFX implements ArmIO {
     @Override
     public void runSpeed(double speed) {
         m_arm.set(speed);
+        System.out.println(m_arm.get());
     }
 
     @Override
     public void stop() {
-        m_arm.set(0);
+        m_arm.stopMotor();
     }
 }
