@@ -26,4 +26,6 @@ public interface ArmIO {
     default void runSpeed(double speed) {}
 
     default void stop() {}
+
+    default void updateSimState() {}
 }

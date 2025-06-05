@@ -56,6 +56,13 @@ public class Arm extends SubsystemBase {
     Logger.processInputs("Arm", m_inputs);
   }
 
+  @Override
+  public void simulationPeriodic() {
+    m_io.updateInputs(m_inputs);
+    Logger.processInputs("Arm", m_inputs);
+    m_io.updateSimState();
+  }
+
   public class ArmSendable implements Sendable {
 
     @Override

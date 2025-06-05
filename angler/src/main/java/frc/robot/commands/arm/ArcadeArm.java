@@ -34,7 +34,8 @@ public class ArcadeArm extends Command {
   public void execute() {
     m_speed = -m_joystick.getRawAxis(ArmConstants.kManualAxis);
     m_speed *= ArmConstants.kMultiplier;
-    m_arm.setSpeed(m_speed);
+    // m_arm.setSpeed(m_speed);
+    m_arm.setSpeed(1);
   }
 
   // Called once the command ends or is interrupted.
