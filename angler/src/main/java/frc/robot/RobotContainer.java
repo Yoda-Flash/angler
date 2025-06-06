@@ -11,13 +11,15 @@ import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.commands.arm.ArcadeArm;
 import frc.robot.constants.JoystickConstants;
 import frc.robot.subsystems.arm.Arm;
+import frc.robot.subsystems.arm.ArmIOSim;
 import frc.robot.subsystems.arm.ArmIOTalonFX;
 
 public class RobotContainer {
 
   private final Joystick m_driverJoystick = new Joystick(JoystickConstants.kDriverJoystickPortID);
 
-  private final ArmIOTalonFX m_armIO = new ArmIOTalonFX();
+  // private final ArmIOTalonFX m_armIO = new ArmIOTalonFX();
+  private final ArmIOSim m_armIO = new ArmIOSim();
   private final Arm m_arm = new Arm(m_armIO);
   private final ArcadeArm m_arcadeArm = new ArcadeArm(m_arm, m_driverJoystick);
 

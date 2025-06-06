@@ -12,6 +12,14 @@ public class ArmConstants {
     public static final int kBottomLimitSwitchChannel = 6;
     public static final int kEncoderChannel = 5;
 
+    // Mechanical
+    public static final double kGearRatio = 40.0742;
+    public static final double kMomentOfInertiaKgMetersSquared = 0.248235976;
+    public static final double kArmLengthMeters = 0.308;
+    public static final double kMinAngleRads = Math.toRadians(-20);
+    public static final double kMaxAngleRads = Math.toRadians(160);
+    public static final double kStartingAngleRads = 0.0;
+
     // Joystick bindings
     public static final int kManualAxis = 1;
 

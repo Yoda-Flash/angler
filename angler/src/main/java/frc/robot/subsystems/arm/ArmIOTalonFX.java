@@ -60,9 +60,10 @@ public class ArmIOTalonFX implements ArmIO {
     @Override
     public void runSpeed(double speed) {
         // m_arm.set(speed);
-        m_dutyCycleOut.Output = 0.50;
+        m_dutyCycleOut.Output = speed;
         m_arm.setControl(m_dutyCycleOut);
         m_simState = m_arm.getSimState();
+        System.out.println("Sim state: " + m_simState.getLastStatusCode());
         System.out.println(m_simState.getMotorVoltage()/RobotController.getBatteryVoltage());
     }
 
